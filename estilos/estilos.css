@@ -1,0 +1,20 @@
+.boton{
+    padding: 15px 25px;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #51bd55;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+.boton:hover{
+  background-color: #3c923f;
+
+}
+.boton:disabled{
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
