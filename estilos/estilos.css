@@ -32,3 +32,17 @@
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     background-color: #fff;
 }
+
+.tablaCantor th,
+.tablaCantor td{
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1em;
+  width: calc(100%/5); /* Para que las columnas tengan el mismo ancho*/
+}
+.tablaCantor th{
+  background-color: #0056b3;
+  color: #fff;
+}
