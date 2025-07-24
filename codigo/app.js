@@ -6,5 +6,8 @@ function ($scope){
     $scope.iniciarJuego = function(){
 
     }
+    $scope.sacarBalota = function(){
+        $scope.cantor.sacarBalota();
+    }
 }
 );

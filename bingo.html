@@ -9,12 +9,17 @@
 </head>
 
 <body ng-controller="ControladorJuegoBingo">
-    <button class="boton" ng-click="iniciarJuego">
+    <button class="boton" ng-click="iniciarJuego ()">
         Iniciar Juego
     </button>
-    <button class="boton">
+    <button class="boton" ng-click="sacarBalota()">
         Sacar Balota
     </button>
+    <div class="ultimaBalota">
+     Ultima balota <spam class="numeroBalota">
+        {{cantor.ultimaBalota || "Ninguno" }}
+     </spam>
+    </div>
 
     <div class="cantor">
         <table class="tablaCantor">
@@ -29,7 +34,7 @@
             </thead>
             <tbody>
                 <tr ng-repeat="fila in cantor.tabla">
-                    <td ng-repeat="numero in fila">
+                    <td ng-repeat="numero in fila" ng-class="{ sacada: cantor.balotasSacadas[numero-1] }">
                         {{ numero }}
                     </td>
                 </tr>
