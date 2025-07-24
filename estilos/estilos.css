@@ -15,6 +15,20 @@
 
 }
 .boton:disabled{
-    background-color: #cccccc;
+    background-color: #fff;
     cursor: not-allowed;
+}
+.cantor{
+  flex: 0 0 300px; /* No crece, no se encoge, tiene un ancho base de 300px */
+  min-width: 280px; /* Ancho mínimo para que no se comprima demasiado */
+  max-width: 350px; /* Ancho máximo, para pantallas grandes */
+  box-sizing: border-box; /* Incluye padding y borde en el ancho */
+  padding-right: 10px; /* Pequeño padding para separar del borde del contenedor */
+}
+
+.tablaCantor{
+    width: 100%; /* Ocupa todo el ancho disponible en .cantor-section */
+    border-collapse: collapse;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    background-color: #fff;
 }
