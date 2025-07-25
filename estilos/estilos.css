@@ -1,75 +1,146 @@
 body {
   font-family: 'Segoe UI';
 }
-.boton{
-    padding: 15px 25px;
+
+.boton {
+  padding: 15px 25px;
   font-size: 24px;
   text-align: center;
   cursor: pointer;
   outline: none;
   color: #fff;
-  background-color: #51bd55;
+  background-color: #4CAF50;
   border: none;
   border-radius: 15px;
   box-shadow: 0 9px #999;
 }
-.boton:hover{
-  background-color: #3c923f;
 
-}
-.boton:disabled{
-    background-color: #cccccc;
-    cursor: not-allowed;
-}
-.cantor{
-  flex: 0 0 300px; /* No crece, no se encoge, tiene un ancho base de 300px */
-  min-width: 280px; /* Ancho mínimo para que no se comprima demasiado */
-  max-width: 350px; /* Ancho máximo, para pantallas grandes */
-  box-sizing: border-box; /* Incluye padding y borde en el ancho */
-  padding-right: 10px; /* Pequeño padding para separar del borde del contenedor */
+.boton:hover {
+  background-color: #3e8e41
 }
 
-.tablaCantor{
-    width: 100%; /* Ocupa todo el ancho disponible en .cantor-section */
-    border-collapse: collapse;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    background-color: #fff;
+.boton:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.cantor {
+  flex: 0 0 300px;
+  /* No crece, no se encoge, tiene un ancho base de 300px */
+  min-width: 280px;
+  /* Ancho mínimo para que no se comprima demasiado */
+  max-width: 350px;
+  /* Ancho máximo, para pantallas grandes */
+  box-sizing: border-box;
+  /* Incluye padding y borde en el ancho */
+  padding-right: 10px;
+  /* Pequeño padding para separar del borde del contenedor */
+}
+
+.tablaCantor {
+  width: 100%;
+  /* Ocupa todo el ancho disponible en .cantor-section */
+  border-collapse: collapse;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
 }
 
 .tablaCantor th,
-.tablaCantor td{
+.tablaCantor td {
   border: 1px solid #ccc;
   padding: 8px;
   text-align: center;
   font-weight: bold;
   font-size: 1em;
-  width: calc(100%/5); /* Para que las columnas tengan el mismo ancho*/
+  width: calc(100% / 5);
+  /* Para que las columnas tengan el mismo ancho */
 }
-.tablaCantor th{
-  background-color: #0f40c5;
-  color: #fff;
+
+.tablaCantor th {
+  background-color: #0056b3;
+  color: white;
 }
-.tablaCantor td.sacada{
+
+.tablaCantor td.sacada {
   background-color: #28a745;
-  color: #ffffff;
+  color: white;
 }
+
 .tablaCantor td:not(.sacada) {
-  background-color: #c4c2c2;
-  color: #000;
+  background-color: #ccc;
+  color: black;
 }
-.ultimaBalota{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin-top: 20px;
-    background-color: #e9e9e9;
-    padding: 10px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    font-size: 1.5em;
-    font-weight: bold;
+
+.ultimaBalota {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 20px;
+  background-color: #e9e9e9;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-size: 1.5em;
+  font-weight: bold;
 }
+
 .numeroBalota {
   color: #d9534f;
   font-size: 1.8em;
+}
+
+.tablas{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center; /* Centra las tarjetas dentro de su contenedor */ 
+
+    flex: 1; /* Permite que este elemento crezca y ocupe el espacio restante */
+    min-width: 400px; /* Ancho mínimo para las tablas de jugadores */
+    box-sizing: border-box;
+}
+
+.jugador{
+    border: 2px solid #333;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    text-align: center;
+    min-width: 250px;
+    max-width: 300px; /* Limita el ancho de cada tarjeta individual */ 
+}
+
+.jugador table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.jugador th {
+  background-color: #d34d0a;
+  color: white;
+}
+
+.jugador h3{
+    margin-top: 0;
+    color: #007bff;
+}
+
+.panelPrincipal{
+    display: flex; /* Habilitar flexbox */
+    gap: 20px; /* Espacio entre las columnas */
+    margin-top: 20px;
+    align-items: flex-start; /* Alinea los ítems al inicio de la cruz */
+    flex-wrap: wrap; /* Permite que las columnas se envuelvan en pantallas pequeñas */ 
+}
+
+.jugador td.sacada {
+  background-color: #2822d6;
+  color: white;
+}
+
+.jugador td:not(.sacada) {
+  background-color: #ccc;
+  color: black;
 }
