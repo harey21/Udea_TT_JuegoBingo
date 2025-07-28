@@ -116,6 +116,12 @@ body {
     border-collapse: collapse;
     margin-top: 10px;
 }
+.jugador th, .jugador td {
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.1em;
+}
 
 .jugador th {
   background-color: #d34d0a;
@@ -135,12 +141,12 @@ body {
     flex-wrap: wrap; /* Permite que las columnas se envuelvan en pantallas pequeñas */ 
 }
 
-.jugador td.sacada {
+.jugador td.tapada {
   background-color: #2822d6;
   color: white;
 }
 
-.jugador td:not(.sacada) {
+.jugador td:not(.tapada) {
   background-color: #ccc;
   color: black;
 }
