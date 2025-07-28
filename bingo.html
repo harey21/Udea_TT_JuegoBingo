@@ -24,6 +24,10 @@
         Pendientes <span class="numeroBalota">
             {{ cantor.pendientes || "Ninguna" }}
         </span>
+        <span ng-if="posicionGanador!=-1">
+            El ganador es {{ jugadores[posicionGanador].nombre }}
+
+        </span>
     </div>
     <div class="panelPrincipal">
         <div class="cantor">
@@ -49,6 +53,7 @@
         <div class="tablas">
             <div class="jugador" ng-repeat="jugador in jugadores">
                 <h3>{{ jugador.nombre }}</h3>
+
                 <table>
                     <thead>
                         <tr>
@@ -61,7 +66,7 @@
                     </thead>
                     <tbody>
                         <tr ng-repeat="fila in jugador.tablaJugador.tabla track by $index">
-                            <td ng-repeat="numero in fila track by $index" ng-class="{ tapada: jugador.tablaJugador.tapada[$parent.$index][$index] }">
+                            <td ng-repeat="numero in fila track by $index" ng-class="{ tapada: jugador.tablaJugador.tapadas[$parent.$index][$index] }">
                                 {{ numero }}
                             </td>
                         </tr>
